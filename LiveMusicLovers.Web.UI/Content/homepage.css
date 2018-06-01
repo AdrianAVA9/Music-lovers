@@ -1,0 +1,104 @@
+﻿
+.body-content {
+	padding-top: 50px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.navbar-collapse {
+	padding-right: 60px;
+}
+
+
+.container {
+	max-width: 100%;
+}
+
+	.container > .navbar-header {
+		margin-left: 45px;
+	}
+
+/*Styles for homepage*/
+
+.banner {
+	height: 600px;
+	background: #000;
+}
+
+	.banner .bannerTopPart {
+		height: 500px;
+		background: #fff;
+	}
+
+	.banner .imageContainer img {
+		width: 100%;
+
+	}
+
+	.banner .text1 {
+		position: absolute;
+		font-size: 100px;
+		color: #FFF;
+		font-family: "Segoe Script";
+		top: 240px;
+		left: 280px;
+	}
+
+	.banner .text2 {
+		position: absolute;
+		font-size: 120px;
+		color: #FFF;
+		font-family: "Segoe Script";
+		top: 360px;
+		left: 150px;
+	}
+
+	.banner .bannerBottomPart {
+		position: relative;
+		height: 100px;
+		background: #000000;
+	}
+
+	.banner .brand {
+		position: absolute;
+		bottom: 0;
+		left: 580px;
+		color: #ff4243;
+		font-family: "Century Gothic";
+		font-size: 16px;
+	}
+
+.WebInformation {
+	margin-top: 100px;
+	padding-top: 150px;
+	height: 500px;
+}
+
+	.WebInformation .text {
+		margin: 0 auto;
+		width: 1150px;
+		font-size: 65px;
+		text-align: center;
+		font-family: "Century Gothic";
+	}
+
+.icon {
+	position: relative;
+	top: -30px;
+	margin-left: 60px;
+}
+
+.other {
+	background: #ff4243;
+	height: 500px;
+}
+
+.other2 {
+	background: #FFF;
+	height: 500px;
+}
+
+.other3 {
+	background: #000;
+	height: 300px;
+}

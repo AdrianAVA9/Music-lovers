@@ -1,0 +1,60 @@
+﻿@model  LiveMusicLovers.Web.UI.Core.ViewModels.GigsViewModel
+@{
+	ViewBag.Title = "Future gigs";
+}
+<h2>@Model.Heading</h2>
+
+@using (Html.BeginForm("Search", "Gig"))
+{
+	<div class="form-group">
+		<div id="searchInput" class="input-group">
+			@Html.TextBoxFor(m => m.SearchTeam, new { @class = "form-control", placeholder = "Search by artist, genre..."})
+			<span class="input-group-addon">
+				<i class="glyphicon glyphicon-search"></i>
+			</span>
+		</div>
+	</div>
+}
+
+<ul id="gigs" class="gigs voffset4">
+	@foreach (var gig in Model.UpcomingGigs)
+	{
+		<li>
+			<div class="date">
+				<div class="month">
+					@gig.getNameMonth()
+				</div>
+				<div class="day">
+					@gig.DateTime.ToString("d ")
+				</div>
+			</div>
+			<div class="details">
+				<span class="artist">
+					<a href="@Url.Action("Details","Gig", new { id = gig.Id })">
+						@gig.Artist.Name
+					</a>
+					@if (gig.IsCanceled)
+					{
+						<span class="label label-warning">Canceled</span>
+					}
+				</span>
+				<span class="genre">
+					@gig.Genre.Name
+				</span>
+				@if (Model.showAction && !gig.IsCanceled)
+				{
+				<button data-gig-id="@gig.Id"class="btn @(Model.Attendances.Contains(gig.Id) ? "btn-info" : "btn-default") btn-sm pull-right js-toggle-attendances">@(Model.Attendances.Contains(gig.Id) ? "Going" : "Going ?")</button>
+				}
+			</div>
+		</li>
+	}
+</ul>
+
+@section scripts{
+	<script>
+		$(document).ready(function() {
+			GigsController.init("#gigs");
+		});
+
+	</script>
+}

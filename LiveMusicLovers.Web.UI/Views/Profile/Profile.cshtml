@@ -1,0 +1,35 @@
+﻿@model LiveMusicLovers.Web.UI.Core.Dto.UserDto
+@{
+	ViewBag.Title = "Profile";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Profile</h2>
+
+<div class="userInformation">
+
+	<div class="profilePicture">
+		<img src="@Model.image" alt="Profile Picture" />
+		<label for="postedFile" class="changePicture">Change picture</label>
+	</div>
+
+	@using (Html.BeginForm("UploadPicture", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+	{
+		<div class="form-group">
+			<input type="file" id="postedFile" name="postedFile" class="hide" />
+			<input type="submit" id="send" class="btn btn-info btn-md hide" value="Save" />
+		</div>
+	}
+
+	<h4 class="name">@Model.Name</h4>
+</div>
+
+@section scripts{
+	<script>
+		$(document).ready(function () {
+			$("#postedFile").change(function () {
+				$("#send").toggleClass('hide').toggleClass('show');
+			});
+		});
+	</script>
+}

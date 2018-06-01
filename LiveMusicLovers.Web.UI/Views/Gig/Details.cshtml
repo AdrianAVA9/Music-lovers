@@ -1,0 +1,53 @@
+﻿@model LiveMusicLovers.Web.UI.Core.Dto.DetailsDto
+@{
+	ViewBag.Title = "Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div id="gigDetails" class="card">
+	<div class="ArtistInfo">
+		<h6 class="icon">MusicLovers</h6>
+		<div class="imageContainer">
+			<img src="@Model.Gig.Artist.image" alt="Profile picture" />
+		</div>
+		<h6 class="username"> @Model.Gig.Artist.Name </h6>
+	</div>
+	@if (User.Identity.IsAuthenticated && !Model.AmI)
+	{
+		<button class="btn btn-info btnFollow js-toggle-relationship" data-artist-id="@Model.Gig.Artist.Id">@((Model.AmIFollowing) ? "Following" : "Follow")</button>
+	}
+
+	<div class="GigInfo">
+		@if(Model.Gig.IsCanceled) {
+			<label class="gigCanceled">Gig canceled</label>
+		}
+		<h4> @Model.Gig.Venue on @Model.Gig.getDateTimeString() </h4>
+
+		@if (User.Identity.IsAuthenticated)
+		{
+			if (@Model.AmIGoing)
+			{
+				<h6> You are going to this event </h6>
+			}
+			else
+			{
+				<h6> You should go to this gig, Let's go to register us</h6>
+			}
+		}
+		else
+		{
+			<h6> Do not miss this Gig!!!</h6>
+		}
+
+
+	</div>
+</div>
+@section Scripts{
+	<script>
+		$(document).ready(function () {
+			GigsDetailsController.init("#gigDetails");
+		});
+	</script>
+}

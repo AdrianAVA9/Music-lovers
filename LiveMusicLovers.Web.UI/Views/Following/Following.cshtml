@@ -1,0 +1,35 @@
+﻿@using System.Activities.Statements
+@model IEnumerable<LiveMusicLovers.Web.UI.Core.Models.ApplicationUser>
+@{
+	ViewBag.Title = "Following";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Following</h2>
+
+<ul id="followeeContainer" class="followee voffset4">
+	@foreach (var followee in Model)
+	{
+		<li class="followeeContainer">
+			<div class="profilePicture">
+				<img src="@followee.image" class="img-circle img-responsive" alt="Profile Picture"/>
+			</div>
+			<div class="UserDetails">
+				<span class="username">@followee.Name</span>
+				<div class="unFollowing">
+					<button class="btn btn-default1 btn-sm js-toggle-follow" data-artist-id="@followee.Id">Unfollow</button>
+				</div>
+			</div>
+		</li>
+	}
+</ul>
+
+@section scripts{
+	<script>
+		$(document).ready(function () {
+			FollowController.init("#followeeContainer");
+		});
+
+	</script>
+}
+

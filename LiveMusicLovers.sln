@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveMusicLovers.Web.UI", "LiveMusicLovers.Web.UI\LiveMusicLovers.Web.UI.csproj", "{64EB5C66-6E31-4597-8308-FB7B9A192C73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EDDD1DF7-5719-4A2F-812F-B0C8686BBA30}"
+	ProjectSection(SolutionItems) = preProject
+		.a11yrc = .a11yrc
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveMusicLovers.Tests", "LiveMusicLovers.Tests\LiveMusicLovers.Tests.csproj", "{4A38BDF0-1465-4F70-8B37-0E372ADD12D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveMusicLovers.IntegrationTests", "LiveMusicLovers.IntegrationTests\LiveMusicLovers.IntegrationTests.csproj", "{A0A785F1-A1C7-49A5-A0C1-50BABDD82065}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64EB5C66-6E31-4597-8308-FB7B9A192C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64EB5C66-6E31-4597-8308-FB7B9A192C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64EB5C66-6E31-4597-8308-FB7B9A192C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64EB5C66-6E31-4597-8308-FB7B9A192C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A38BDF0-1465-4F70-8B37-0E372ADD12D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A38BDF0-1465-4F70-8B37-0E372ADD12D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A38BDF0-1465-4F70-8B37-0E372ADD12D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A38BDF0-1465-4F70-8B37-0E372ADD12D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A785F1-A1C7-49A5-A0C1-50BABDD82065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A785F1-A1C7-49A5-A0C1-50BABDD82065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A785F1-A1C7-49A5-A0C1-50BABDD82065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A785F1-A1C7-49A5-A0C1-50BABDD82065}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C32B8CD7-A988-4854-BD5E-BDE5104DDC98}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://livemusiclovers.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LiveMusicLovers.Web.UI\\LiveMusicLovers.Web.UI.csproj
+		SccProjectName1 = LiveMusicLovers.Web.UI
+		SccLocalPath1 = LiveMusicLovers.Web.UI
+		SccProjectUniqueName2 = LiveMusicLovers.Tests\\LiveMusicLovers.Tests.csproj
+		SccProjectName2 = LiveMusicLovers.Tests
+		SccLocalPath2 = LiveMusicLovers.Tests
+		SccProjectUniqueName3 = LiveMusicLovers.IntegrationTests\\LiveMusicLovers.IntegrationTests.csproj
+		SccProjectName3 = LiveMusicLovers.IntegrationTests
+		SccLocalPath3 = LiveMusicLovers.IntegrationTests
+	EndGlobalSection
+EndGlobal
